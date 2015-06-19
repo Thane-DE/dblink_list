@@ -34,7 +34,7 @@ dblink_list: $(OBJS) $(USER_OBJS)
 
 # Other Targets
 clean:
-	-$(RM) $(OBJS)$(C_DEPS)$(EXECUTABLES) dblink_list
+	-$(RM) $(EXECUTABLES)$(OBJS)$(C_DEPS) dblink_list
 	-@echo ' '
 
 .PHONY: all clean dependents

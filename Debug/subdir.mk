@@ -17,13 +17,6 @@ C_DEPS += \
 
 
 # Each subdirectory must supply rules for building sources it contributes
-dblink_list.o: ../dblink_list.c
-	@echo 'Building file: $<'
-	@echo 'Invoking: Cross GCC Compiler'
-	gcc -O0 -g3 -Wall -c -fmessage-length=0 -std=c99 -MMD -MP -MF"$(@:%.o=%.d)" -MT"dblink_list.d" -o "$@" "$<"
-	@echo 'Finished building: $<'
-	@echo ' '
-
 %.o: ../%.c
 	@echo 'Building file: $<'
 	@echo 'Invoking: Cross GCC Compiler'
