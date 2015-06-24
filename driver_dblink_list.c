@@ -15,6 +15,9 @@ int main(void){
 	array[1] = 7;
 	array[2] = 15;
 	array[3] = 69;
-	clear((create_sorted_list(array,4)));
+	struct List *new;
+	new = create_sorted_list(array,4);
+	clear(new);
+	free(new);
 	return 0;
 }
