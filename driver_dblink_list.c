@@ -15,6 +15,6 @@ int main(void){
 	array[1] = 7;
 	array[2] = 15;
 	array[3] = 69;
-	print_list((create_sorted_list(array,4)));
+	clear((create_sorted_list(array,4)));
 	return 0;
 }

@@ -87,7 +87,6 @@ void insert_value(struct List *list, long value) {
 		list->head = new_Node;
 		new_Node->next = list->tail;
 		new_Node->previous = 0;
-		printf("SUCCESS: List Empty, value inserted as head\n");
 		return;
 	}
 	//Second check: Is there a tail
@@ -99,7 +98,6 @@ void insert_value(struct List *list, long value) {
 			new_Node->previous = list->head;
 			new_Node->next = 0;
 			list->head->next = new_Node;
-			printf("SUCCESS: New value inserted as tail\n");
 			return;
 		}
 		else{
@@ -113,7 +111,6 @@ void insert_value(struct List *list, long value) {
 			list->head = new_Node;
 			list->head->next = list->tail;
 			list->head->previous =0;
-			printf("SUCCESS: New value inserted as new head\n");
 			return;
 		}
 	}
@@ -138,7 +135,6 @@ void insert_value(struct List *list, long value) {
 		new_Node->previous = 0;
 		new_Node->next = tmp_ptr;
 		list->head = new_Node;
-		printf("SUCCESS: New value inserted as new head\n");
 		return;
 	}
 	if(value > list->tail->data){
@@ -151,7 +147,6 @@ void insert_value(struct List *list, long value) {
 		new_Node->next = 0;
 		new_Node->previous = tmp_ptr;
 		list->tail = new_Node;
-		printf("SUCCESS: New value inserted as new tail\n");
 		return;
 	}
 
@@ -174,8 +169,6 @@ void insert_value(struct List *list, long value) {
 
 			iterator->previous->next = new_Node;
 			iterator->previous = new_Node;
-
-			printf("SUCCESS: Value inserted Normally\n");
 			return;
 		}
 		iterator = iterator->next;
